@@ -1,0 +1,16 @@
+name: mlflow-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.6.9
+  - pip
+  - pip:
+    - mlflow
+    - keras==2.3.1
+    - tensorflow==1.14.0
+    - matplotlib
+    - numpy
+    - python-math
+    - sklearn
+
