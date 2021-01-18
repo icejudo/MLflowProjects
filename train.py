@@ -43,7 +43,7 @@ def train_model(model, X_train, y_train, name, config):
     }
     
     mlflow.set_experiment("traffic_flow-saes")    
-    with mlflow.start_run(run_name="SAE") as run:
+    with mlflow.start_run() as run:
         mlflow.set_tags(tags)
         mlflow.keras.autolog()
         
