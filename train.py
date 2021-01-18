@@ -34,7 +34,7 @@ def train_model(model, X_train, y_train, name, config):
         name: String, name of model.
         config: Dict, parameter for train.
     """
-
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
     tracking_uri = mlflow.get_tracking_uri()
     print("Current tracking uri: {}".format(tracking_uri))
 
@@ -118,7 +118,7 @@ def main(argv):
     args = parser.parse_args()
 
     lag = 12
-    config = {"batch": 256, "epochs": 100}
+    config = {"batch": 256, "epochs": 200}
     file1 = 'data/train.csv'
     file2 = 'data/test.csv'
     X_train, y_train, _, _, _ = process_data(file1, file2, lag)
