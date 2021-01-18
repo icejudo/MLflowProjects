@@ -3,7 +3,5 @@ name: example
 conda_env: conda.yaml
 
 entry_points:
-  main:
-    parameters:
-       epochs: {type:integer, default:100}     
-    command: "python train.py {epochs}"
+  main:         
+    command: "python train.py"
