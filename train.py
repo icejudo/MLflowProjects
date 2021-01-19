@@ -42,7 +42,7 @@ def train_model(model, X_train, y_train, name, config):
         "usuario": "Anonymous"
     }
     
-    mlflow.set_experiment("traffic_flow-saes")    
+    #mlflow.set_experiment("traffic_flow-saes")    
     with mlflow.start_run() as run:
         mlflow.set_tags(tags)
         mlflow.keras.autolog()
@@ -138,4 +138,5 @@ def main(argv):
 
 
 if __name__ == '__main__':
+    os.environ['MLFLOW_TRACKING_URI'] = 'http://127.0.0.1:5000'
     main(sys.argv)
