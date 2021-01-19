@@ -59,7 +59,7 @@ def train_model(model, X_train, y_train, name, config):
         df = pd.DataFrame.from_dict(hist.history)
         df.to_csv('model/' + name + ' loss.csv', encoding='utf-8', index=False)
         mlflow.log_param("Run_id", run.info.run_id)
-        mlflow.log_artifact("./picture.png")        
+        #mlflow.log_artifact("./picture.png")        
         #mlflow.keras.log_model(keras_model=model, artifact_path="model")
 
             #PARTE PARA CONVERTIR A ONNX
