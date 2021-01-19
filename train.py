@@ -34,7 +34,7 @@ def train_model(model, X_train, y_train, name, config):
         name: String, name of model.
         config: Dict, parameter for train.
     """
-    #mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
     tracking_uri = mlflow.get_tracking_uri()
     print("Current tracking uri: {}".format(tracking_uri))
 
