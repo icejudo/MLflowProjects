@@ -42,7 +42,7 @@ def train_model(model, X_train, y_train, name, config):
         "usuario": "Anonymous"
     }
     
-    #mlflow.set_experiment("traffic_flow-saes")    
+    mlflow.set_experiment("traffic_flow-saes")    
     with mlflow.start_run() as run:
         mlflow.set_tags(tags)
         mlflow.keras.autolog()
