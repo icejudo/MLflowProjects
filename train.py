@@ -42,7 +42,7 @@ def train_model(model, X_train, y_train, name, config):
         "usuario": "Anonymous"
     }
     
-    mlflow.set_experiment("traffic_flow-saes")    
+    #mlflow.set_experiment("traffic_flow-saes")    
     with mlflow.start_run() as run:
         mlflow.set_tags(tags)
         mlflow.keras.autolog()
@@ -118,7 +118,7 @@ def main(argv):
     args = parser.parse_args()
 
     lag = 12
-    config = {"batch": 256, "epochs": 200}
+    config = {"batch": 256, "epochs": 100}
     file1 = 'data/train.csv'
     file2 = 'data/test.csv'
     X_train, y_train, _, _, _ = process_data(file1, file2, lag)
