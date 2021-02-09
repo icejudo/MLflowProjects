@@ -119,8 +119,8 @@ def main(argv):
 
     lag = 12
     config = {"batch": 256, "epochs": 50}
-    file1 = 'data/train.csv'
-    file2 = 'data/test.csv'
+    file1 = '../MiRepoGithub/data/train.csv'
+    file2 = '../MiRepoGithub/data/test.csv'
     X_train, y_train, _, _, _ = process_data(file1, file2, lag)
 
     if args.model == 'lstm':
