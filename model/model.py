@@ -2,7 +2,7 @@
 Defination of NN model
 """
 from tensorflow.keras.layers import Dense, Dropout, Activation
-from tensorflow.keras.layers.recurrent import LSTM, GRU
+from keras.layers.recurrent import LSTM, GRU
 from tensorflow.keras.models import Sequential
 
 
