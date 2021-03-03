@@ -42,7 +42,7 @@ def train_model(model, X_train, y_train, name, config):
         "usuario": "Anonymous"
     }
     
-    mlflow.set_experiment("traffic_flow-lstm")    
+    mlflow.set_experiment("traffic_flow-saes")    
     with mlflow.start_run() as run:
         mlflow.set_tags(tags)
         mlflow.keras.autolog()
@@ -113,7 +113,7 @@ def main(argv):
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--model",
-        default="lstm",
+        default="saes",
         help="Model to train.")
     args = parser.parse_args()
 
