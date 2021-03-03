@@ -1,9 +1,9 @@
 """
 Defination of NN model
 """
-from keras.layers import Dense, Dropout, Activation
-from keras.layers.recurrent import LSTM, GRU
-from keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Activation
+from tensorflow.keras.layers.recurrent import LSTM, GRU
+from tensorflow.keras.models import Sequential
 
 
 def get_lstm(units):
